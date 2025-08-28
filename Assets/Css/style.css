@@ -10,16 +10,15 @@ body{
     padding: 20px;
     min-height: 100vh;
     background-color: rgb(15, 23, 42);
+    padding-top: 50px;
+   
 
 
 
     display: flex;
     grid-template-columns: repeat(9, 1fr);
     grid-auto-rows: 75px auto 75px;
-    grid-template-areas: 
-    "hd hd hd hd hd hd hd hd hd"
-    "sd sd mn mn mn mn mn mn mn"
-    "ft ft ft ft ft ft ft ft ft"
+   
 }
 
 .side-bar{
@@ -27,13 +26,21 @@ body{
     grid-area: sd;
     font-size: 30px;
     line-height: 50px;
-    color: white;
-    display: flex ;
     flex: 50%;
+    padding-top: 40px;
+    padding-left: 30px;
+    padding-right: 60px;
+    position: fixed;
+    left: 0;
+    height: 100vh;
+    line-height: 35px;
 }
 section{
-    color: white
+    color: white;
+    font-size: 15px;
+    padding-left: 60px;
 }
+
 
 
 main{
@@ -46,16 +53,60 @@ main{
 }
 
 .container{
-    display: flex;
-    flex: 50%;
     grid-template-columns: repeat(2,1fr);
     padding: 3px;
     place-content: center;
     gap: 1rem;
     grid-auto-rows: minmax(100, auto);
-    color: white;
+    color: rgb(116, 151, 190);
     background-color: rgb(15, 23, 41);
+    padding-left: 500px;
+    padding-right: 20px;
+    padding-bottom: 50px;
+
 }
 
+a{
+    text-decoration: none;
+    color: rgb(116, 151, 190);
+    padding: spx;
+font-size: 15px;
+}
 
+.parent .a{
+    margin-bottom: 25px;
+    padding-left: 500px;
+}
 
+.parent .b{
+    margin-bottom: 25px;
+    padding-left: 500px;
+}
+
+.parent .c{
+    margin-bottom: 25px;
+    margin-top: 25px;
+    
+}
+
+.parent .d{
+    margin-bottom: 80px;
+   
+}
+.sidebar .bri{
+    margin-bottom: 10px;
+}
+
+.margin{
+    margin-bottom: 150px;
+}
+.project{
+    margin-bottom: 50px;
+}
+.bottom{
+    margin-bottom: 110px;
+}
+.tower{
+    padding-left: 500px;
+    padding-top: 100px;
+}

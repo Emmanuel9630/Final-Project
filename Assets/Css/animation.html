@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <section class="container">
+            <div class="items">1</div>
+            <div class="items">2</div>
+            <div class="items">3</div>
+
+        </section>
+    </main>
+
+
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            width: 100%;
+            height: 100vh;
+            padding: 30px;
+        }
+
+        .items{
+            width: 200px;
+            height: 100px;
+            border: 1px dashed black;
+        }
+
+        .container{
+            display: flex;
+            flex-flow: column nowrap;
+            gap: 2rem;
+            border: 1px solid red;
+            align-items: center;
+        }
+        div:first-child{
+            background-color: midnightblue;
+            /* transform: translate(50%); */
+            /* transform: scaleX(1.5); */
+            /* transform: skew(10deg); */
+            /* transform: rotateX(40deg); */
+        }
+        div:nth-child(2){
+            background-color: yellow;
+            /* transform: translate(50%); */
+            /* transform: scaleY(100%); */
+            /* transform: skewY(10deg); */
+            /* transform: rotateX(180deg); */
+        }
+        div:last-child{
+            background-color: limegreen;
+            /* transform: translate(50%, 50%); */
+            /* transform: scale(1.5, 0.9); */
+            /* transform: skew(15deg, 5deg); */
+            /* transform: rotateZ(40deg); */
+        }
+
+        div{
+            transition-property: all;
+            transition-duration: 1s;
+            transition-delay: 0.5s;
+            transition-timing-function: ease-in-out;
+        }
+
+        div:hover{
+            background-color: dodgerblue;
+        }
+
+        div:last-child:hover{
+            transform: rotateZ(40deg);
+        }
+
+        div:nth-child(2):hover{
+            animation-name: slide;
+            animation-duration: 5s;
+            animation-delay: 0s;
+            animation-timing-function: ease-in-out;
+            animation-iteration-count: 3;
+        }
+
+        @keyframes slide {
+            0%{
+                transform:translateX(0)
+            }
+            33%{
+                transform: translateX(300px);
+            }
+            66%{
+                transform: translateX(-600px);
+            }
+            100%{
+                transform:translateX(0)
+            }
+        }
+
+        
+    </style>
+</body>
+</html>
